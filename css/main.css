@@ -1,0 +1,410 @@
+:root {
+    --main-color: #feb401;
+    --main-color-2: #dd9c00;
+    --main-color-background: #fefbf3;
+    --color-white: #ffffff;
+    --color-text: #4d4d4d;
+    --color-text-2: #525659;
+    --color-footer-dark: #202020;
+    --color-footer-dark-text: #9ea6a0;
+    --control-size: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+
+/************** header **************/
+.main-header {
+    width: 100%; 
+    background-color: var(--color-white);
+    padding: 2px 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header__logo {
+    color: var(--main-color);
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.main-header__logo > p {
+    margin: 26px 0;
+}
+
+.main-nav {
+    display: flex;
+}
+
+.main-nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.main-nav__item {
+    margin: 0 16px;
+}
+
+.main-nav__item a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    padding: 3px 0;
+}
+
+.main-nav__cta a {
+    color: var(--main-color-2);
+}
+
+/************** section one **************/
+.section-main {
+    position: relative;
+}
+
+.section-main__overview {
+    background: url("../img/nav_img.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+.section-main__nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--main-color-2);
+}
+
+.section-main__nav__items {
+    margin: 0 115px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.section-main__nav__item {
+    margin: 0 30px;
+    padding: 28px 18px;
+    height: 100%;
+}
+
+.section-main__nav__item a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 500;
+    padding: 3px 0;
+}
+
+.section-main__profile__photo {
+    position: absolute;
+    border-radius: 7px;
+    background: url("../img/profile-photo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    z-index: 1;
+    bottom: -20px;
+    left: 120px;
+}
+
+.section-main__nav__cta {
+    background-color: var(--color-text);
+}
+
+/************** section two **************/
+.article-main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color-background);
+}
+
+.article-main__header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 100px 90px;
+    width: 100%;
+}
+
+.article-main__header-title {
+    font-family: 'sans-serif';
+    font-size: 62px;
+    color: var(--color-text);
+}
+
+.article-main__header-title>h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.article-main__header-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+.article-main__header-buttons > a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.article-button-one {
+    color: var(--main-color);
+    padding: 15px 20px;
+    border: 2px solid var(--main-color);
+    border-radius: 35px;
+    margin-right: 15px;
+}
+
+.article-button-two {
+    color: var(--color-white);
+    padding: 15px 75px;
+    border: 2px solid var(--main-color);
+    background-color: var(--main-color);
+    border-radius: 35px;
+}
+
+/************** calendar controls **************/
+.article-main__cal-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: flex-start;
+    padding-bottom: 230px;
+    height: 20px;
+}
+
+.control_left {
+    display: block;
+    text-indent: -9999px;
+    width: var(--control-size);
+    height: var(--control-size);
+    background: url(../img/left.svg);
+    background-size: var(--control-size) var(--control-size);
+}
+
+.control_center {
+    display: block;
+    text-indent: -9999px;
+    width: var(--control-size);
+    height: var(--control-size);
+    background: url(../img/circle.svg);
+    background-size: var(--control-size) var(--control-size);
+    margin: 0px 10px;
+    cursor: none;
+}
+
+.control_right {
+    display: block;
+    text-indent: -9999px;
+    width: var(--control-size);
+    height: var(--control-size);
+    background: url(../img/right.svg);
+    background-size: var(--control-size) var(--control-size);
+}
+
+/************** calendar code **************/
+.article-main__calendars {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 35px 10px;
+    width: 100%;
+}
+
+.calendar-one__batch {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.calendar-two__batch {
+    display: none;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.calendar {
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-white);
+    max-width: 400px;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 1px solid var(--color-text);
+}
+
+.calendar .month {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.calendar .days {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(7, 1fr);
+    color: var(--color-footer-dark);
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.calendar .days span {
+    width: 40px;
+    font-size: 14px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    color: var(--color-footer-dark);
+}
+
+.calendar .dates {
+    display: grid;
+    font-size: 14px;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar .dates button {
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    justify-self: center;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin: 2px;
+    transition-duration: 0.2s;
+}
+
+.calendar .dates button.today {
+    box-shadow: inset 0px 0px 0px 2px var(--main-color);
+    background: var(--main-color);
+    color: var(--color-white);
+}
+
+.calendar .dates button.today:hover {
+    background: var(--main-color);
+    color: var(--color-white);
+}
+
+.calendar .dates button.booked {
+    box-shadow: inset 0px 0px 0px 2px var(--color-footer-dark-text);
+    background: var(--color-footer-dark-text);
+    color: var(--color-white);
+}
+
+.calendar .dates button.booked:hover,
+.calendar .dates button.booked:focus {
+    background: var(--color-footer-dark-text);
+    color: var(--color-white);
+}
+
+.c1 .dates button:first-child {
+    grid-column: 2;
+}
+
+.c2 .dates button:first-child {
+    grid-column: 5;
+}
+
+.c3 .dates button:first-child {
+    grid-column: 1;
+}
+
+.c4 .dates button:first-child {
+    grid-column: 3;
+}
+
+.c5 .dates button:first-child {
+    grid-column: 6;
+}
+
+.c6 .dates button:first-child {
+    grid-column: 1;
+}
+
+.calendar .dates button:hover {
+    background: var(--color-footer-dark-text);
+    color: var(--color-white);
+}
+
+.calendar .dates button:focus {
+    background: var(--color-footer-dark);
+    color: var(--color-white);
+    font-weight: 500;
+}
+  
+
+/************** footer **************/
+.footer-main {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 220px;
+    justify-content: space-between;
+}
+
+.footer-main__lists {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-main__list {
+    padding-bottom: 15px;
+    font-weight: 500;
+}
+
+.footer-main__list a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 17px;
+}
+
+.footer-main__list-header {
+    padding-bottom: 30px;
+    font-weight: 700;
+}
+
+.footer-sub {
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-footer-dark);
+    color: var(--color-footer-dark-text);
+}
